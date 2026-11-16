@@ -61,3 +61,27 @@ Distributed-Broadcast-Simulation/
 
 
 
+## Build and run
+
+Requires OMNeT++ 6.3.0. Activate it in every new terminal first:
+
+```bash
+source ~/omnetpp-6.3.0/setenv
+```
+
+Build (the first command generates `src/Makefile`, needed once per clone):
+
+```bash
+make makefiles
+make
+```
+
+Run the reference lab network in batch mode:
+
+```bash
+cd simulations
+../src/diffuse -u Cmdenv -n ../src:. -c RunDiffuse3
+```
+
+Use `-u Qtenv` instead of `-u Cmdenv` for the graphical run.
+Expected for `RunDiffuse3` (9 nodes, 9 links, 100 ms per link): 10 messages, simulation ends at t = 0.4 s.
