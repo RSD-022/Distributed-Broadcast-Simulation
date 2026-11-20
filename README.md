@@ -55,7 +55,7 @@ Distributed-Broadcast-Simulation/
 
 ## Build and run
 
-Requires OMNeT++ 6.3.0. Activate it in every new terminal first:
+Requires OMNeT++ 6.3.0 or later (also tested with 6.4.0). Activate it in every new terminal first:
 
 ```bash
 source ~/omnetpp-6.3.0/setenv
