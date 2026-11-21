@@ -41,12 +41,12 @@ Distributed-Broadcast-Simulation/
 ├── simulations/
 │   ├── omnetpp.ini           # run configurations
 │   ├── Network3.ned          # 9-node lab network, the reference run
-│   ├── validation/           # planned: test networks V1–V7
+│   ├── validation/           # test networks V1–V7 (Single, Line6, Tree7, Ring4, Cyclic6, Gaps)
 │   ├── synthetic/            # planned: line, ring, tree, grid, complete, random
 │   └── real/                 # planned: Abilene, Geant, Germany50 (SNDlib)
 ├── data/topologies/          # planned: source graphs and manifest
-├── scripts/                  # planned: generate, run, export, analyze
-├── tests/                    # planned: expected traces, validation results
+├── scripts/                  # summary.sh, run_validation.sh; planned: generate, run, export, analyze
+├── tests/                    # hand traces and validation results
 ├── results/                  # planned: processed CSV files and figures
 ├── docs/                     # specification, methodology, AI usage log
 ├── report/                   # planned: 3-5 page report
@@ -55,7 +55,7 @@ Distributed-Broadcast-Simulation/
 
 ## Build and run
 
-Requires OMNeT++ 6.3.0. Activate it in every new terminal first:
+Requires OMNeT++ 6.3.0 or later (also tested with 6.4.0). Activate it in every new terminal first:
 
 ```bash
 source ~/omnetpp-6.3.0/setenv
