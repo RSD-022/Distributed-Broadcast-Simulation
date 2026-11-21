@@ -5,7 +5,7 @@ import Link;
 
 //
 // V7: gate vectors with unconnected entries (tests the safe-gate fix).
-// Each node has 3 gates; only node[0].gate[2] <--> node[1].gate[1] is connected.
+// Each node has 3 gates; only node[0].gate[2] <--> node[1].gate[0] is connected.
 // Node3 must skip gates 0 and 2 of node 1 and gates 0 and 1 of node 0,
 // and send through the real gate index, not the neighbour position.
 //
@@ -18,5 +18,5 @@ network Gaps
         }
 
     connections allowunconnected:
-        node[0].gate[2] <--> Link <--> node[1].gate[1];
+        node[0].gate[2] <--> Link <--> node[1].gate[0];
 }

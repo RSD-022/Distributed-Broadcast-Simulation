@@ -66,11 +66,11 @@ All three runs: 0 duplicates, 6/6 informed. The number of messages stays the sam
 
 ## V7 Gaps
 
-Two nodes with 3 gates each. Only `node[0].gate[2] <--> node[1].gate[1]` is connected.
+Two nodes with 3 gates each. Only `node[0].gate[2] <--> node[1].gate[0]` is connected.
 
 | t | Event | Sent |
 |---|---|---|
 | 0 ms | 0 skips unconnected gates 0 and 1, finds neighbour 1 on gate 2, sends Z={0,1} on gate 2 | 1 |
-| 1 ms | 1 receives on gate 1; its only neighbour, 0, is in Z, so it sends nothing | 0 |
+| 1 ms | 1 receives on gate 0; its only neighbour, 0, is in Z, so it sends nothing | 0 |
 
 Total: 1 sent, 1 received, 0 duplicates, 2/2 informed, last first reception 1 ms, no runtime error. Before the gate fix, node 0 would have sent on gate 0 (the neighbour's position instead of the real gate index) or crashed on an unconnected gate.
