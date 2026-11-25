@@ -29,11 +29,17 @@ private:
 
     bool informed = false;
     simtime_t firstReception;
+    
+    bool crashed = false;
+    double crashProb = 0;
+    double lossProb = 0;
+    long lost = 0;
 
 protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
     virtual void finish() override;
+    void sendWithLoss(DiffuseMessage *packet, int gateIndex);
 };
 
 Define_Module(Node3);
@@ -62,7 +68,24 @@ void Node3::initialize()
 
     // Fix 1: configurable initiator.
     initiator = par("initiator").boolValue();
+    crashProb = par("crashProb").doubleValue();
+    lossProb = par("lossProb").doubleValue();
 
+    if (!(crashProb >= 0 && crashProb <= 1) ||
+        !(lossProb >= 0 && lossProb <= 1)) {
+        throw cRuntimeError(
+           "crashProb and lossProb must be between 0 and 1"
+        );
+     }
+
+      crashed = !initiator &&
+          crashProb > 0 &&
+          uniform(0, 1) < crashProb;
+
+    if (crashed) {
+        getDisplayString().setTagArg("i", 1, "gray");
+        return;
+    }
     if (initiator) {
         // Fix 5: source is informed at simulation start.
         informed = true;
@@ -82,11 +105,8 @@ void Node3::initialize()
 
         // Fix 4: send only through connected output gates.
         for (int k = 0; k < outGate.size(); k++) {
-            // Fix 5: count each transmitted copy.
-            sent++;
-            zEntriesSent += msg->getZArraySize();
-
-            send(msg->dup(), "gate$o", outGate[k]);
+            // Fix 7: count each transmitted copy.
+            sendWithLoss(msg->dup(), outGate[k]);
         }
 
         getDisplayString().setTagArg("i", 1, "red");
@@ -101,7 +121,11 @@ void Node3::handleMessage(cMessage *msg)
 {
     // Fix 5: count every arrival, including duplicates.
     received++;
-
+    if (crashed) {
+       delete msg;
+       return;
+    }
+    
     if (done) {
         duplicates++;
     }
@@ -142,14 +166,9 @@ void Node3::handleMessage(cMessage *msg)
 
         for (int k = 0; k < missingZ.size(); k++) {
             // Fix 5: count each transmitted copy.
-            sent++;
-            zEntriesSent += receivedMsg->getZArraySize();
-
-            // Fix 4: translate neighbor position into actual gate index.
-            send(
-                receivedMsg->dup(),
-                "gate$o",
-                outGate[missingZ[k]]
+            sendWithLoss(
+                        receivedMsg->dup(),
+                        outGate[missingZ[k]]
             );
         }
     }
@@ -160,6 +179,24 @@ void Node3::handleMessage(cMessage *msg)
     delete msg;
 }
 
+
+void Node3::sendWithLoss(
+    DiffuseMessage *packet,
+    int gateIndex
+)
+{
+    // Count every attempted transmission.
+    sent++;
+    zEntriesSent += packet->getZArraySize();
+
+    if (lossProb > 0 && uniform(0, 1) < lossProb) {
+        lost++;
+        delete packet;
+        return;
+    }
+
+    send(packet, "gate$o", gateIndex);
+}
 
 void Node3::finish()
 {
@@ -176,4 +213,6 @@ void Node3::finish()
         : std::numeric_limits<double>::quiet_NaN();
 
     recordScalar("firstReceptionTime", arrivalTime, "s");
+    recordScalar("crashed", crashed ? 1 : 0);
+    recordScalar("lost", lost);
 }
