@@ -1,9 +1,7 @@
 name,family,n,m,avg_degree,diameter,seed,source,sha256
-<<<<<<< HEAD
 Abilene,real,12,15,2.50,5,,https://sndlib.put.poznan.pl,
 Geant,real,22,36,3.27,5,,https://sndlib.put.poznan.pl,
 Germany50,real,50,88,3.52,9,,https://sndlib.put.poznan.pl,
-=======
 Complete10,complete,10,45,9.000,1,,complete graph,b11bc78aa738d12d2f3cad13c1a297f985e19ad4998f980f1e537bbc15dd8e5b
 Complete100,complete,100,4950,99.000,1,,complete graph,8d01f7ddc32351bdd5949023ce44d09c1a2895eecc770fb5fbbf3ee589886565
 Complete20,complete,20,190,19.000,1,,complete graph,3a0eba32fcd665e242a75883f2d5e5107c0d87d6a336ae17fb08eb78cba7c990
@@ -28,4 +26,3 @@ Tree10,tree,10,9,1.800,5,,complete binary tree,393f154cd9dddc2117c8f44fa7d6cb82d
 Tree100,tree,100,99,1.980,12,,complete binary tree,fe1b7f71809178dbed811912c1d38411e871d42f7cd0801fb97511531bb16d26
 Tree20,tree,20,19,1.900,7,,complete binary tree,c1dcb48f12a92b97a7c05152298d1ae6107da8a8404775a459959fcb75b0ca25
 Tree50,tree,50,49,1.960,10,,complete binary tree,c549098670eb77830f23fb8f166208d1058a57173e77f0249a628303253fd04d
->>>>>>> feature/step4-synthetic-topologies
