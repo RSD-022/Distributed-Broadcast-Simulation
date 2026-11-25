@@ -1,0 +1,4 @@
+name,family,n,m,avg_degree,diameter,seed,source,sha256
+Abilene,real,12,15,2.50,5,,https://sndlib.put.poznan.pl,
+Geant,real,22,36,3.27,5,,https://sndlib.put.poznan.pl,
+Germany50,real,50,88,3.52,9,,https://sndlib.put.poznan.pl,

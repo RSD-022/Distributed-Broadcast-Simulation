@@ -1,0 +1,105 @@
+//
+// Germany50 topology from SNDlib
+// Converted to OMNeT++ NED by Role C (Step 5)
+//
+
+package real;
+
+import Node3;
+import Link;
+
+network Germany50
+{
+    submodules:
+        node[50]: Node3;
+
+    connections allowunconnected:
+        node[0].gate++ <--> Link <--> node[29].gate++;
+        node[0].gate++ <--> Link <--> node[46].gate++;
+        node[0].gate++ <--> Link <--> node[48].gate++;
+        node[1].gate++ <--> Link <--> node[34].gate++;
+        node[1].gate++ <--> Link <--> node[47].gate++;
+        node[1].gate++ <--> Link <--> node[49].gate++;
+        node[2].gate++ <--> Link <--> node[8].gate++;
+        node[2].gate++ <--> Link <--> node[31].gate++;
+        node[2].gate++ <--> Link <--> node[37].gate++;
+        node[3].gate++ <--> Link <--> node[11].gate++;
+        node[3].gate++ <--> Link <--> node[20].gate++;
+        node[3].gate++ <--> Link <--> node[31].gate++;
+        node[3].gate++ <--> Link <--> node[32].gate++;
+        node[3].gate++ <--> Link <--> node[43].gate++;
+        node[4].gate++ <--> Link <--> node[5].gate++;
+        node[4].gate++ <--> Link <--> node[22].gate++;
+        node[4].gate++ <--> Link <--> node[35].gate++;
+        node[4].gate++ <--> Link <--> node[44].gate++;
+        node[5].gate++ <--> Link <--> node[21].gate++;
+        node[5].gate++ <--> Link <--> node[22].gate++;
+        node[5].gate++ <--> Link <--> node[25].gate++;
+        node[5].gate++ <--> Link <--> node[32].gate++;
+        node[6].gate++ <--> Link <--> node[7].gate++;
+        node[6].gate++ <--> Link <--> node[22].gate++;
+        node[6].gate++ <--> Link <--> node[38].gate++;
+        node[7].gate++ <--> Link <--> node[15].gate++;
+        node[8].gate++ <--> Link <--> node[11].gate++;
+        node[8].gate++ <--> Link <--> node[13].gate++;
+        node[9].gate++ <--> Link <--> node[16].gate++;
+        node[9].gate++ <--> Link <--> node[23].gate++;
+        node[9].gate++ <--> Link <--> node[33].gate++;
+        node[10].gate++ <--> Link <--> node[14].gate++;
+        node[10].gate++ <--> Link <--> node[25].gate++;
+        node[10].gate++ <--> Link <--> node[35].gate++;
+        node[10].gate++ <--> Link <--> node[44].gate++;
+        node[11].gate++ <--> Link <--> node[13].gate++;
+        node[11].gate++ <--> Link <--> node[31].gate++;
+        node[12].gate++ <--> Link <--> node[14].gate++;
+        node[12].gate++ <--> Link <--> node[29].gate++;
+        node[13].gate++ <--> Link <--> node[25].gate++;
+        node[13].gate++ <--> Link <--> node[31].gate++;
+        node[13].gate++ <--> Link <--> node[49].gate++;
+        node[14].gate++ <--> Link <--> node[48].gate++;
+        node[15].gate++ <--> Link <--> node[27].gate++;
+        node[16].gate++ <--> Link <--> node[18].gate++;
+        node[16].gate++ <--> Link <--> node[19].gate++;
+        node[16].gate++ <--> Link <--> node[28].gate++;
+        node[17].gate++ <--> Link <--> node[24].gate++;
+        node[17].gate++ <--> Link <--> node[30].gate++;
+        node[18].gate++ <--> Link <--> node[19].gate++;
+        node[18].gate++ <--> Link <--> node[25].gate++;
+        node[18].gate++ <--> Link <--> node[49].gate++;
+        node[19].gate++ <--> Link <--> node[25].gate++;
+        node[19].gate++ <--> Link <--> node[44].gate++;
+        node[20].gate++ <--> Link <--> node[43].gate++;
+        node[21].gate++ <--> Link <--> node[22].gate++;
+        node[21].gate++ <--> Link <--> node[27].gate++;
+        node[21].gate++ <--> Link <--> node[43].gate++;
+        node[22].gate++ <--> Link <--> node[39].gate++;
+        node[23].gate++ <--> Link <--> node[24].gate++;
+        node[23].gate++ <--> Link <--> node[28].gate++;
+        node[23].gate++ <--> Link <--> node[42].gate++;
+        node[24].gate++ <--> Link <--> node[33].gate++;
+        node[24].gate++ <--> Link <--> node[42].gate++;
+        node[24].gate++ <--> Link <--> node[45].gate++;
+        node[26].gate++ <--> Link <--> node[30].gate++;
+        node[26].gate++ <--> Link <--> node[34].gate++;
+        node[27].gate++ <--> Link <--> node[43].gate++;
+        node[28].gate++ <--> Link <--> node[29].gate++;
+        node[28].gate++ <--> Link <--> node[44].gate++;
+        node[28].gate++ <--> Link <--> node[46].gate++;
+        node[30].gate++ <--> Link <--> node[45].gate++;
+        node[31].gate++ <--> Link <--> node[32].gate++;
+        node[32].gate++ <--> Link <--> node[43].gate++;
+        node[34].gate++ <--> Link <--> node[37].gate++;
+        node[34].gate++ <--> Link <--> node[40].gate++;
+        node[34].gate++ <--> Link <--> node[41].gate++;
+        node[35].gate++ <--> Link <--> node[39].gate++;
+        node[36].gate++ <--> Link <--> node[38].gate++;
+        node[36].gate++ <--> Link <--> node[48].gate++;
+        node[37].gate++ <--> Link <--> node[41].gate++;
+        node[37].gate++ <--> Link <--> node[49].gate++;
+        node[38].gate++ <--> Link <--> node[39].gate++;
+        node[38].gate++ <--> Link <--> node[48].gate++;
+        node[40].gate++ <--> Link <--> node[41].gate++;
+        node[42].gate++ <--> Link <--> node[46].gate++;
+        node[45].gate++ <--> Link <--> node[47].gate++;
+        node[45].gate++ <--> Link <--> node[49].gate++;
+}
