@@ -61,10 +61,12 @@ Requires OMNeT++ 6.3.0 or later (also tested with 6.4.0). Activate it in every n
 source ~/omnetpp-6.3.0/setenv
 ```
 
-Build (the first command generates `src/Makefile`, needed once per clone):
+Build (the first command (make makefiles) generates `src/Makefile`, needed once per clone):
+
+from the root directory of the project 
 
 ```bash
-make makefiles
+make makefiles 
 make
 ```
 
