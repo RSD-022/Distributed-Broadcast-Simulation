@@ -1,0 +1,32 @@
+//
+// Abilene topology from SNDlib
+// Converted to OMNeT++ NED by Role C (Step 5)
+//
+
+package real;
+
+import Node3;
+import Link;
+
+network Abilene
+{
+    submodules:
+        node[12]: Node3;
+
+    connections allowunconnected:
+        node[0].gate++ <--> Link <--> node[1].gate++;
+        node[1].gate++ <--> Link <--> node[4].gate++;
+        node[1].gate++ <--> Link <--> node[5].gate++;
+        node[1].gate++ <--> Link <--> node[11].gate++;
+        node[2].gate++ <--> Link <--> node[5].gate++;
+        node[2].gate++ <--> Link <--> node[8].gate++;
+        node[3].gate++ <--> Link <--> node[6].gate++;
+        node[3].gate++ <--> Link <--> node[9].gate++;
+        node[3].gate++ <--> Link <--> node[10].gate++;
+        node[4].gate++ <--> Link <--> node[6].gate++;
+        node[4].gate++ <--> Link <--> node[7].gate++;
+        node[5].gate++ <--> Link <--> node[6].gate++;
+        node[7].gate++ <--> Link <--> node[9].gate++;
+        node[8].gate++ <--> Link <--> node[11].gate++;
+        node[9].gate++ <--> Link <--> node[10].gate++;
+}

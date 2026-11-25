@@ -1,0 +1,28 @@
+name,family,n,m,avg_degree,diameter,seed,source,sha256
+Abilene,real,12,15,2.50,5,,https://sndlib.put.poznan.pl,
+Geant,real,22,36,3.27,5,,https://sndlib.put.poznan.pl,
+Germany50,real,50,88,3.52,9,,https://sndlib.put.poznan.pl,
+Complete10,complete,10,45,9.000,1,,complete graph,b11bc78aa738d12d2f3cad13c1a297f985e19ad4998f980f1e537bbc15dd8e5b
+Complete100,complete,100,4950,99.000,1,,complete graph,8d01f7ddc32351bdd5949023ce44d09c1a2895eecc770fb5fbbf3ee589886565
+Complete20,complete,20,190,19.000,1,,complete graph,3a0eba32fcd665e242a75883f2d5e5107c0d87d6a336ae17fb08eb78cba7c990
+Complete50,complete,50,1225,49.000,1,,complete graph,ff8cb65ee6382ae0965023f5a83e0f06d3a7e516e876c1c3271d4905833e2bff
+Grid10,grid,10,13,2.600,5,,grid 2x5,05368dcf81b925c5c23d0dc95ff9ecd4cea6734536bd6d953f398ab1dcdd35ad
+Grid100,grid,100,180,3.600,18,,grid 10x10,45c1c694014014f1ab2857b0ab75ee77d75e3a266f26ce569fd288b6b2103e95
+Grid20,grid,20,31,3.100,7,,grid 4x5,ec67bc15ca2a8c88fa7380177f33eab7af280e67c8de3a71e4b3d6c67f4f6b66
+Grid50,grid,50,85,3.400,13,,grid 5x10,25d3a26de083be8b7cf7af624a025f2f2faf268bf051d129f005ba74a9b76241
+Line10,line,10,9,1.800,9,,path graph,47d0ecb9c5b5cd52ae5181a8af6a9d331301d99f9bdbb618539c339a565bed45
+Line100,line,100,99,1.980,99,,path graph,a6624ffcb84b9ec7126998bac54e05d0580ad2f3dd9de510d8bbc43927f82d23
+Line20,line,20,19,1.900,19,,path graph,aade54efa8cd818b1de27f54cb9914b052c84d4168d6e60e96a1313420533e76
+Line50,line,50,49,1.960,49,,path graph,b36d1111e909090519bad2b91b33d8032dedf2b131a75ed4579c5cc487b87f7f
+Random10,random,10,26,5.200,3,1,"G(n,p) p=0.4605 attempts=1",5785fd53191baed1224bd67878047b5162745d946d5e764d3fa541b0cfdb99e6
+Random100,random,100,474,9.480,4,1,"G(n,p) p=0.0921 attempts=1",d0eee055685de3117d51ae9586992ba94ac82e2d896371177eea0378699568fd
+Random20,random,20,58,5.800,4,1,"G(n,p) p=0.2996 attempts=1",94f38a5aebcb47544fe38efb4f52a6e8e56d0406001758c3b0e89abc281d277f
+Random50,random,50,182,7.280,4,1,"G(n,p) p=0.1565 attempts=1",85129ab8bddbf13ffb875dd96d014bf20be2c213b5abcd66eacf809599013352
+Ring10,ring,10,10,2.000,5,,cycle graph,cbb149456e2ffaafc5dee88f3c3d18fd6d29d502cd2922b3ab75916aeee44fd7
+Ring100,ring,100,100,2.000,50,,cycle graph,9b184bc027d767e4aa2669000ae25b29de7958f43adcb1e3586eb07864fdb1dc
+Ring20,ring,20,20,2.000,10,,cycle graph,8c648c37968d01bb34af236c4f648c91e1ad25697e0ff5dbdb63568beda3a533
+Ring50,ring,50,50,2.000,25,,cycle graph,9d79e5045dd73c24f8359e76a4b46c1e968c53f83253e8668362eafcd9aa8b78
+Tree10,tree,10,9,1.800,5,,complete binary tree,393f154cd9dddc2117c8f44fa7d6cb82dc5ab2014c79fc6ed61421d2d97a12f9
+Tree100,tree,100,99,1.980,12,,complete binary tree,fe1b7f71809178dbed811912c1d38411e871d42f7cd0801fb97511531bb16d26
+Tree20,tree,20,19,1.900,7,,complete binary tree,c1dcb48f12a92b97a7c05152298d1ae6107da8a8404775a459959fcb75b0ca25
+Tree50,tree,50,49,1.960,10,,complete binary tree,c549098670eb77830f23fb8f166208d1058a57173e77f0249a628303253fd04d
