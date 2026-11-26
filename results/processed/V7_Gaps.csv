@@ -1,0 +1,13 @@
+run,repetition,module,name,value
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[0],sent,1
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[0],received,0
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[0],duplicates,0
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[0],zEntriesSent,2
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[0],informed,1
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[0],firstReceptionTime,0
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[1],sent,0
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[1],received,1
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[1],duplicates,0
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[1],zEntriesSent,0
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[1],informed,1
+V7_Gaps-0-20261121-14:20:53-24960,0,Gaps.node[1],firstReceptionTime,0.001

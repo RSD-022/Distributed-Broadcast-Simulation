@@ -1,0 +1,7 @@
+run,repetition,module,name,value
+V1_Single-0-20261121-00:39:45-13659,0,Single.node[0],sent,0
+V1_Single-0-20261121-00:39:45-13659,0,Single.node[0],received,0
+V1_Single-0-20261121-00:39:45-13659,0,Single.node[0],duplicates,0
+V1_Single-0-20261121-00:39:45-13659,0,Single.node[0],zEntriesSent,0
+V1_Single-0-20261121-00:39:45-13659,0,Single.node[0],informed,1
+V1_Single-0-20261121-00:39:45-13659,0,Single.node[0],firstReceptionTime,0
